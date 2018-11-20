@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './Header';
+import Order from './Order';
+import Inventory from './Inventory';
 
 class App extends React.Component {
   render(){
@@ -8,6 +10,8 @@ class App extends React.Component {
         <div className="menu">
           <Header />
         </div>
+          <Order />
+          <Inventory />
           {/* <Inventory />
           <Order /> */}
       </div>
