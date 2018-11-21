@@ -635,7 +635,7 @@ button.twitter:after,
 input[type=submit].twitter:after {
   background: #2c8dd0;
 }
-.store-selector {
+.store-selector, .not-found {
   background: #fff;
   max-width: 500px;
   margin: 50px auto;
