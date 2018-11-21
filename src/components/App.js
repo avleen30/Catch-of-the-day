@@ -12,8 +12,6 @@ class App extends React.Component {
         </div>
           <Order />
           <Inventory />
-          {/* <Inventory />
-          <Order /> */}
       </div>
     );
   }
