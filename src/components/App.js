@@ -72,10 +72,14 @@ class App extends React.Component {
     // 2. Either add to order or update the number in our order
     order[key] = order[key] + 1 || 1;
     // 3. call setState toupdate our state object
-    this.setState({
-      order: order
-    })
+    this.setState({order})
   };
+
+  removeFromOrder = key => {
+    const order = {...this.state.order};
+    delete order[key];
+    this.setState({order});
+  }
 
   render(){
     return (
@@ -94,7 +98,8 @@ class App extends React.Component {
         </div>
           <Order
             fishes= {this.state.fishes}
-            order={this.state.order}/>
+            order={this.state.order}
+            removeFromOrder={this.removeFromOrder}/>
           <Inventory
             fishes= {this.state.fishes}
             addFish={this.addFish}
