@@ -41,15 +41,22 @@ class App extends React.Component {
     //2. Add our new fish to Fishes
     fishes[`fish${Date.now()}`] = fish;
     //3. set the new fishes object to state
-    this.setState({
-      fishes: fishes
-    });
+    this.setState({fishes});
   };
 
   updateFish = (key, updatedFish) => {
     //make a copy of fishes from statusRef
     const fishes = {...this.state.fishes, [key]: updatedFish};
     // set to state
+    this.setState({fishes});
+  }
+
+  deleteFish = key => {
+    //take a copy of state
+    const fishes = {...this.state.fishes};
+    // update the state
+    fishes[key] = null;
+    //update state
     this.setState({fishes});
   }
 
@@ -92,6 +99,7 @@ class App extends React.Component {
             fishes= {this.state.fishes}
             addFish={this.addFish}
             updateFish = {this.updateFish}
+            deleteFish = {this.deleteFish}
             loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
