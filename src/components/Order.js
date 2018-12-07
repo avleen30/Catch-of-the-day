@@ -32,11 +32,11 @@ class Order extends React.Component {
     )};
     return (
         <li key = {key}>
-            <span>{ count } </span>lbs { fish.name }
-            <span>{ formatPrice(count * fish.price) }</span>
-            <button onClick={() => this.props.removeFromOrder(key)}>&times;</button>
-          </li>
-    );
+          <span>{ count } </span>lbs { fish.name }
+          <span>{ formatPrice(count * fish.price) }</span>
+          <button onClick={() => this.props.removeFromOrder(key)}>&times;</button>
+        </li>
+      );
   };
 
   render() {
