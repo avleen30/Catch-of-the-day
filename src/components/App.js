@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import PropTypes from 'prop-types';
 import Order from './Order';
 import Inventory from './Inventory';
 import sampleFishes from '../sample-fishes';
@@ -12,6 +13,10 @@ class App extends React.Component {
     fishes: {},
     order: {}
   };
+
+  static propTypes = {
+    match: PropTypes.object
+  }
 
   componentDidMount(){
     const { params } = this.props.match;
@@ -85,7 +90,7 @@ class App extends React.Component {
     return (
       <div className="catch-of-the-day">
         <div className="menu">
-          <Header tagline="Fresh Seafood Market" />
+          <Header tagline="catch of the day" />
           <ul className="fishes">
             {Object.keys(this.state.fishes).map(key => (
               <Fish

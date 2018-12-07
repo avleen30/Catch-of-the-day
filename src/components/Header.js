@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // stateless functional component below as this object only returns an HTML element
 //implicit reurn ->
@@ -16,5 +17,9 @@ const Header = (props) => (
       </h3>
     </header>
   );
+
+  Header.propTypes = {
+    tagline: PropTypes.string.isRequired
+  }
 
 export default Header;
