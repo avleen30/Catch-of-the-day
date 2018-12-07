@@ -15,4 +15,4 @@ npm run build
 npm start
 
 ## View the site live here
-[Catch of the Day](https://vibrant-gates-f96f71.netlify.com/)
+[Catch of the Day](https://vibrant-gates-f96f71.netlify.com)
